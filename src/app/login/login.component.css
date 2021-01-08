@@ -59,6 +59,7 @@ html {
     background-color: #f6f6f6;
     border-top: 1px solid #dce8f1;
     padding: 25px;
+    margin-top: 10%;
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
@@ -124,7 +125,7 @@ html {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5px;
+    margin: 15px;
     width: 65%;
     border: 2px solid #f6f6f6;
     -webkit-transition: all 0.5s ease-in-out;

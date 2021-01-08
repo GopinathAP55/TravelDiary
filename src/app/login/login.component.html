@@ -1,27 +1,31 @@
+<div *ngIf='!isLoggedIn'>
 <div class="wrapper fadeInDown">
     <div id="formContent">
       <!-- Tabs Titles -->
   
       <!-- Icon -->
-      <div class="fadeIn first">
+      <div  style='margin-top: 5%;' class="fadeIn first">
         <h1> <span class="badge badge-secondary">Travel Diary</span></h1>
   
       </div>
   
       <!-- Login Form -->
       <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-        <input type="submit" routerLink='/home' class="fadeIn fourth" value="Log In">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username/mobile no">
+        <input *ngIf='isGetOTPClicked' type="text" id="password" class="fadeIn first" name="login" placeholder="OTP">
       </form>
-  
-      <!-- Remind Passowrd -->
-      <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-      </div>
+      <button  *ngIf='!isGetOTPClicked'(click)="getOTP()" class="fadeIn fourth btn btn-primary"> get OTP</button>
+      <button *ngIf='isGetOTPClicked' (click)="logIn()" class="fadeIn fourth btn btn-primary"> Log in</button>
+
+  <div style='margin-top: 5%;'*ngIf='isGetOTPClicked' class='fadeIn first'>
+<span>timer</span>
+  </div>
+      
       <div id="formFooter">
         <a class="underlineHover" href="#">Create Account</a>
       </div>
+
+
   
     </div>
   </div>
@@ -29,3 +33,4 @@
   <div class="wrapper fadeInDown">
     <router-outlet></router-outlet>
   </div>
+</div>
