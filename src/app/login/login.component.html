@@ -5,13 +5,13 @@
   
       <!-- Icon -->
       <div  style='margin-top: 5%;' class="fadeIn first">
-        <h1> <span class="badge badge-secondary">Travel Diary1</span></h1>
+        <h1> <span class="badge badge-secondary">Travel Diary</span></h1>
   
       </div>
   
       <!-- Login Form -->
       <form>
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username/mobile no">
+        <input type="text" id="login" class="fadeIn second"  placeholder="Username/mobile no">
         <input *ngIf='isGetOTPClicked' type="text" id="password" class="fadeIn first" name="login" placeholder="OTP">
       </form>
       <button  *ngIf='!isGetOTPClicked'(click)="getOTP()" class="fadeIn fourth btn btn-primary"> get OTP</button>
